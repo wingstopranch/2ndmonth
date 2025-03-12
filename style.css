@@ -1,0 +1,154 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(#d6f3ff, #ffffff);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.date-plan {
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.date-plan h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.date-plan ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.date-plan li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+/* Add a fish emoji before each list item */
+.date-plan li::before {
+  content: "🐠  ";
+}
+
+/* Hearts floating in the corner */
+.heart {
+  position: absolute;
+  font-size: 1.2rem;
+  animation: float 5s infinite;
+  color: #ff6b6b;
+  opacity: 0.8;
+}
+
+/* Keyframes for floating hearts */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(15deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Button for fish pop-ups */
+.popup-btn {
+  background-color: #f57ca7;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.popup-btn:hover {
+  background-color: #ff9ebf;
+}
+
+/* Pop-up container */
+.popup-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.popup-message {
+  background-color: #ffe0f0;
+  border-radius: 10px;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.popup-message span {
+  margin-right: 0.5rem;
+}
+
+/* Subtle wave at the bottom */
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url('https://raw.githubusercontent.com/codeconvey/demo-repo/main/wave.svg') repeat-x;
+  animation: wave-animation 10s linear infinite;
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1600px;
+  }
+}
